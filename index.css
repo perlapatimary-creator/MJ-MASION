@@ -1,0 +1,687 @@
+/* =========================================
+   MAISON MJ — LUXURY FASHION
+   ========================================= */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: #0b0b0b;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 6%;
+    background: #080808;
+    border-bottom: 1px solid rgba(213, 179, 123, 0.3);
+    position: relative;
+    z-index: 100;
+}
+
+.logo,
+.footer-brand {
+    color: #ffffff;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #d5b37b;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.navbar nav a,
+.nav-right a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 1.6px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover,
+.nav-right a:hover,
+.navbar nav .active {
+    color: #d5b37b;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-right .nav-shop {
+    color: #d5b37b;
+    border: 1px solid #d5b37b;
+    padding: 10px 13px;
+}
+
+/* HERO */
+.hero {
+    min-height: 82vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image: url(
+        "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=2000&q=85"
+    );
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.64),
+        rgba(0, 0, 0, 0.84)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(900px, 100%);
+    padding: 60px 24px;
+}
+
+.welcome,
+.qr-small {
+    color: #d5b37b;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 8vw, 100px);
+    font-weight: 500;
+    letter-spacing: clamp(5px, 1.5vw, 15px);
+    line-height: 1.2;
+    margin-top: 12px;
+}
+
+.gold-line {
+    width: 75px;
+    height: 1px;
+    background: #d5b37b;
+    margin: 25px auto;
+}
+
+.hero h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(21px, 3vw, 30px);
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.description {
+    max-width: 600px;
+    margin: 25px auto;
+    line-height: 1.9;
+    color: #dddddd;
+    font-size: 13px;
+}
+
+/* HERO BUTTONS */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.main-button,
+.outline-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 1.6px;
+    transition: 0.3s ease;
+}
+
+.main-button {
+    background: #d5b37b;
+    color: #111111;
+    border: 1px solid #d5b37b;
+}
+
+.main-button:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.outline-button {
+    border: 1px solid #d5b37b;
+    color: #ffffff;
+}
+
+.outline-button:hover {
+    background: #d5b37b;
+    color: #111111;
+}
+
+/* COLLECTIONS */
+.collections-section {
+    padding: 95px 6%;
+    background: #0b0b0b;
+}
+
+.collections-heading,
+.shop-heading {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.collections-heading > p,
+.shop-heading > p {
+    color: #d5b37b;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.collections-heading h2,
+.shop-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 50px);
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.collections-heading span,
+.shop-heading span {
+    color: #aaaaaa;
+    font-size: 12px;
+}
+
+/* COLLECTION CARDS */
+.collection-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.collection-card {
+    min-height: 520px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.women-card {
+    background-image: url(
+        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=85"
+    );
+}
+
+.men-card {
+    background-image: url(
+        "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1000&q=85"
+    );
+}
+
+.all-card {
+    background-image: url(
+        "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1000&q=85"
+    );
+}
+
+.collection-card:hover {
+    transform: translateY(-6px);
+}
+
+.collection-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        transparent 15%,
+        rgba(0, 0, 0, 0.9)
+    );
+}
+
+.collection-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    width: 100%;
+}
+
+.collection-content small {
+    color: #d5b37b;
+    letter-spacing: 3px;
+}
+
+.collection-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.collection-content p {
+    color: #dddddd;
+    line-height: 1.8;
+    font-size: 12px;
+    max-width: 330px;
+    margin-bottom: 22px;
+}
+
+.collection-content a {
+    display: inline-block;
+    color: #d5b37b;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 1.6px;
+    border-bottom: 1px solid #d5b37b;
+    padding-bottom: 6px;
+}
+
+/* SHOP THE LOOK / AFFILIATE PRODUCTS */
+.shop-section {
+    padding: 95px 6%;
+    background: #101010;
+    border-top: 1px solid rgba(213, 179, 123, 0.16);
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.shop-card {
+    min-width: 0;
+    background: #171717;
+    border: 1px solid rgba(213, 179, 123, 0.2);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.shop-card:hover {
+    transform: translateY(-5px);
+    border-color: #d5b37b;
+}
+
+.shop-card img {
+    display: block;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    background: #222222;
+}
+
+.shop-info {
+    padding: 24px;
+}
+
+.product-category {
+    color: #d5b37b;
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.shop-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.shop-info > p:not(.product-category) {
+    color: #bbbbbb;
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 12px 0 22px;
+}
+
+.product-button {
+    display: inline-block;
+    color: #d5b37b;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid #d5b37b;
+    padding-bottom: 6px;
+}
+
+.product-button:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.affiliate-note {
+    max-width: 850px;
+    margin: 34px auto 0;
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 10px;
+    line-height: 1.9;
+}
+
+/* QR CODE SECTION */
+.qr-section {
+    padding: 75px 6%;
+    background: linear-gradient(135deg, #111111, #080808);
+    border-top: 1px solid rgba(213, 179, 123, 0.2);
+    border-bottom: 1px solid rgba(213, 179, 123, 0.2);
+}
+
+.qr-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.qr-text {
+    max-width: 500px;
+}
+
+.qr-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 48px);
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.qr-text .gold-line {
+    margin: 20px 0;
+}
+
+.qr-text > p:last-child {
+    color: #bdbdbd;
+    font-size: 12px;
+    line-height: 1.9;
+    max-width: 450px;
+}
+
+.qr-box {
+    flex: 0 0 auto;
+    background: #ffffff;
+    padding: 16px;
+    width: 252px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.qr-box:hover {
+    transform: translateY(-5px);
+}
+
+.qr-box img {
+    display: block;
+    width: 220px;
+    height: 220px;
+    margin: auto;
+}
+
+.qr-box span {
+    display: block;
+    color: #111111;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+    background: #050505;
+    text-align: center;
+    padding: 58px 20px 32px;
+}
+
+.footer-brand {
+    display: inline-block;
+    font-size: 36px;
+    letter-spacing: 7px;
+    font-weight: 500;
+}
+
+footer > p {
+    color: #999999;
+    margin: 14px 0 24px;
+    font-size: 11px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-bottom: 24px;
+}
+
+.footer-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d5b37b;
+}
+
+footer .footer-disclosure {
+    max-width: 700px;
+    margin: 0 auto 18px;
+    color: #aaaaaa;
+    font-size: 10px;
+}
+
+footer small {
+    color: #666666;
+    font-size: 10px;
+}
+
+/* TABLET */
+@media (max-width: 1100px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar nav {
+        order: 3;
+        width: 100%;
+    }
+
+    .nav-right {
+        margin-left: auto;
+    }
+
+    .collection-card {
+        min-height: 470px;
+    }
+
+    .collection-content {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 850px) {
+    .collection-cards,
+    .shop-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .collection-card {
+        min-height: 480px;
+    }
+
+    .qr-container {
+        gap: 40px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 18px 16px;
+        gap: 16px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .navbar nav {
+        gap: 12px 16px;
+    }
+
+    .navbar nav a,
+    .nav-right a {
+        font-size: 9px;
+    }
+
+    .nav-right {
+        margin: 0;
+    }
+
+    .nav-right a:first-child {
+        display: none;
+    }
+
+    .hero {
+        min-height: 76vh;
+    }
+
+    .hero-content {
+        padding: 48px 18px;
+    }
+
+    .welcome,
+    .qr-small {
+        letter-spacing: 3px;
+    }
+
+    .brand-name {
+        letter-spacing: 5px;
+    }
+
+    .hero h2 {
+        letter-spacing: 1.5px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-button,
+    .outline-button {
+        width: min(280px, 100%);
+    }
+
+    .collections-section,
+    .shop-section {
+        padding: 70px 5%;
+    }
+
+    .collection-cards,
+    .shop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-card {
+        min-height: 480px;
+    }
+
+    .shop-card img {
+        height: 360px;
+    }
+
+    .qr-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .qr-text .gold-line {
+        margin: 20px auto;
+    }
+
+    .qr-text > p:last-child {
+        margin: auto;
+    }
+
+    .footer-links {
+        gap: 14px 18px;
+    }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

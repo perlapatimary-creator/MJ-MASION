@@ -1,0 +1,532 @@
+/* =====================================
+   MAISON MJ - MEN'S COLLECTION
+   File: men.css
+===================================== */
+
+:root {
+    --men-black: #11100e;
+    --men-dark: #1b1916;
+    --men-gold: #c6a15b;
+    --men-cream: #f7f3ec;
+    --men-white: #ffffff;
+    --men-muted: #a9a39a;
+    --men-border: #ded5c7;
+}
+
+/* BASE */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    background: var(--men-cream);
+    color: var(--men-black);
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVIGATION */
+
+.men-header {
+    min-height: 85px;
+    padding: 18px 7%;
+    background: var(--men-black);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.men-header .brand,
+.footer-brand {
+    color: var(--men-white);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.men-header .brand span,
+.footer-brand span {
+    color: var(--men-gold);
+}
+
+.men-nav {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    flex-wrap: wrap;
+}
+
+.men-nav a {
+    color: #eee9e0;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.men-nav a:hover,
+.men-nav a.active {
+    color: var(--men-gold);
+}
+
+/* COMMON TEXT */
+
+.eyebrow {
+    color: var(--men-gold);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* HERO */
+
+.men-hero {
+    min-height: 500px;
+    padding: 75px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: var(--men-white);
+
+    background:
+        linear-gradient(
+            rgba(15, 13, 11, 0.62),
+            rgba(15, 13, 11, 0.74)
+        ),
+        url("https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=1800&q=85")
+        center 35% / cover no-repeat;
+}
+
+.men-hero-content {
+    max-width: 780px;
+}
+
+.men-hero h1 {
+    margin: 15px 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(42px, 7vw, 76px);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.men-hero h1 em,
+.men-quote h2 em {
+    color: var(--men-gold);
+    font-weight: 400;
+}
+
+.men-hero-content > p:not(.eyebrow) {
+    max-width: 570px;
+    margin: 20px auto 30px;
+    color: #f0ece5;
+    font-size: 14px;
+}
+
+/* BUTTONS */
+
+.gold-button {
+    display: inline-block;
+    padding: 14px 25px;
+
+    border: 1px solid var(--men-gold);
+    background: var(--men-gold);
+    color: var(--men-black);
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+.gold-button:hover {
+    background: transparent;
+    color: var(--men-gold);
+}
+
+/* INTRODUCTION */
+
+.men-intro {
+    max-width: 760px;
+    margin: auto;
+    padding: 70px 25px 40px;
+    text-align: center;
+}
+
+.men-intro h2,
+.section-heading h2,
+.men-quote h2 {
+    margin: 10px 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(32px, 5vw, 46px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.men-intro > p:last-child,
+.section-heading > p:last-child {
+    color: #6d675e;
+    font-size: 13px;
+}
+
+/* CATEGORY LINKS */
+
+.men-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px 20px 45px;
+}
+
+.men-categories a {
+    min-width: 115px;
+    padding: 11px 18px;
+
+    border: 1px solid var(--men-border);
+    color: var(--men-black);
+
+    font-size: 11px;
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+.men-categories a:hover {
+    border-color: var(--men-gold);
+    background: var(--men-black);
+    color: var(--men-gold);
+}
+
+/* SHOP SECTION */
+
+.men-shop {
+    padding: 25px 7% 80px;
+}
+
+.section-heading {
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+.men-product-category {
+    margin-bottom: 65px;
+    scroll-margin-top: 100px;
+}
+
+.men-product-category > h3 {
+    margin-bottom: 25px;
+    padding-bottom: 13px;
+
+    border-bottom: 1px solid var(--men-border);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/* PRODUCT GRID */
+
+.men-product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.men-product {
+    min-width: 0;
+    overflow: hidden;
+
+    background: var(--men-white);
+    border: 1px solid #e9e2d8;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.men-product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.men-product img {
+    display: block;
+    width: 100%;
+    height: 360px;
+
+    object-fit: cover;
+    background: #e7e0d6;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-type {
+    margin: 0 0 8px;
+    color: #a17b37;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.product-info h4 {
+    margin: 0 0 9px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.product-description {
+    min-height: 44px;
+    margin: 0 0 20px;
+
+    color: #6d675e;
+    font-size: 12px;
+}
+
+/* SHOP NOW */
+
+.product-button {
+    display: inline-block;
+    padding: 12px 20px;
+
+    border: 1px solid var(--men-black);
+    background: var(--men-black);
+    color: var(--men-white);
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    transition: all 0.3s ease;
+}
+
+.product-button:hover {
+    border-color: var(--men-gold);
+    background: var(--men-gold);
+    color: var(--men-black);
+}
+
+/* AFFILIATE DISCLOSURE */
+
+.affiliate-disclosure {
+    max-width: 650px;
+    margin: 30px auto 0;
+
+    color: #777168;
+    font-size: 10px;
+    text-align: center;
+}
+
+/* BRAND MESSAGE */
+
+.men-quote {
+    padding: 70px 20px;
+
+    background: var(--men-dark);
+    color: var(--men-white);
+    text-align: center;
+}
+
+.men-quote h2 {
+    max-width: 720px;
+    margin: 15px auto 20px;
+}
+
+.men-quote > p:not(.eyebrow) {
+    max-width: 550px;
+    margin: 0 auto 28px;
+
+    color: #d9d3c9;
+    font-size: 12px;
+}
+
+/* FOOTER */
+
+.men-footer {
+    padding: 45px 7% 25px;
+    background: var(--men-black);
+    color: #d9d3c9;
+    text-align: center;
+}
+
+.men-footer .footer-brand {
+    display: inline-block;
+}
+
+.men-footer > p {
+    font-size: 11px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: #eee9e0;
+    font-size: 11px;
+}
+
+.footer-links a:hover {
+    color: var(--men-gold);
+}
+
+.men-footer .copyright {
+    padding-top: 18px;
+    border-top: 1px solid #35312b;
+    color: var(--men-muted);
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+    .men-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .men-nav {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .men-product img {
+        height: 300px;
+    }
+
+    .men-shop {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 560px) {
+    .men-header {
+        padding: 18px 15px;
+        gap: 15px;
+    }
+
+    .men-header .brand {
+        font-size: 27px;
+    }
+
+    .men-nav {
+        gap: 12px;
+    }
+
+    .men-nav a {
+        font-size: 9px;
+    }
+
+    .men-hero {
+        min-height: 420px;
+        padding: 55px 20px;
+    }
+
+    .men-hero h1 {
+        font-size: 44px;
+    }
+
+    .men-hero-content > p:not(.eyebrow) {
+        font-size: 12px;
+    }
+
+    .men-intro {
+        padding: 50px 22px 35px;
+    }
+
+    .men-categories {
+        gap: 8px;
+        padding-bottom: 30px;
+    }
+
+    .men-categories a {
+        min-width: 105px;
+        padding: 9px 12px;
+        font-size: 10px;
+    }
+
+    .men-shop {
+        padding: 20px 15px 50px;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .men-product-category {
+        margin-bottom: 45px;
+    }
+
+    .men-product-category > h3 {
+        font-size: 27px;
+    }
+
+    .men-product-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .men-product img {
+        height: 360px;
+    }
+
+    .product-info {
+        padding: 20px;
+    }
+
+    .product-info h4 {
+        font-size: 25px;
+    }
+
+    .men-quote {
+        padding: 55px 20px;
+    }
+
+    .footer-links {
+        gap: 16px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}

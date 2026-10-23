@@ -1,0 +1,637 @@
+/* =====================================
+   MAISON MJ - CONTACT PAGE
+   Luxury Black, Gold & Cream Theme
+===================================== */
+
+:root {
+    --black: #11100e;
+    --black-soft: #191714;
+    --gold: #c8a96a;
+    --gold-light: #e2ca91;
+    --cream: #f7f2e9;
+    --cream-dark: #e9dfcf;
+    --text: #f5f0e7;
+    --muted: #bdb5a7;
+    --border: rgba(200, 169, 106, 0.28);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* Announcement */
+
+.announcement {
+    padding: 8px 15px;
+    background: var(--gold);
+    color: var(--black);
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+/* Header */
+
+.header {
+    min-height: 90px;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo,
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+.logo span,
+.footer-logo span {
+    color: var(--gold);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 27px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--gold-light);
+}
+
+/* Shared typography */
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 1.8;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+}
+
+h1 span,
+h2 span {
+    color: var(--gold);
+}
+
+/* Hero */
+
+.hero {
+    padding: 100px 20px 85px;
+    text-align: center;
+    background:
+        radial-gradient(
+            ellipse at top,
+            rgba(200, 169, 106, 0.10),
+            transparent 65%
+        );
+}
+
+.hero h1 {
+    margin: 14px 0 20px;
+    font-size: clamp(52px, 7vw, 86px);
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.hero-description {
+    max-width: 580px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+}
+
+.gold-line {
+    width: 65px;
+    height: 1px;
+    margin: 30px auto 0;
+    background: var(--gold);
+}
+
+/* Contact layout */
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 75px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 7% 110px;
+}
+
+.contact-info {
+    padding-top: 12px;
+}
+
+.contact-info h2,
+.form-container h2 {
+    margin: 17px 0 20px;
+    font-size: clamp(42px, 5vw, 60px);
+    line-height: 1.1;
+}
+
+.info-description,
+.form-description {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 2;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.contact-icon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border);
+    color: var(--gold);
+    font-size: 20px;
+}
+
+.contact-item h3 {
+    margin-bottom: 4px;
+    color: var(--cream);
+    font-size: 21px;
+}
+
+.contact-item a,
+.contact-item p {
+    color: var(--muted);
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+.contact-item a {
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--gold-light);
+}
+
+.social-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 55px;
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 1.8px;
+}
+
+.social-note span {
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+}
+
+/* Form */
+
+.form-container {
+    padding: 42px;
+    background: var(--cream);
+    color: var(--black);
+}
+
+.form-container .eyebrow {
+    color: #8d6e32;
+}
+
+.form-container h2 {
+    font-size: 48px;
+}
+
+.form-description {
+    margin-bottom: 30px;
+    color: #6d675e;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 23px;
+}
+
+.form-group label {
+    margin-bottom: 9px;
+    color: #373128;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 12px;
+    border: 1px solid #d8cdbb;
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+    color: var(--black);
+    font-size: 12px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #9a7838;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999084;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    color: var(--black);
+    background: var(--cream);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--black);
+    background: var(--black);
+    color: var(--cream);
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.submit-btn span {
+    color: var(--gold-light);
+    font-size: 20px;
+}
+
+.submit-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.submit-btn:hover span {
+    color: var(--black);
+}
+
+.form-note {
+    margin-top: 15px;
+    color: #777064;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+/* FAQ */
+
+.faq-section {
+    padding: 100px 7%;
+    background: var(--cream);
+    color: var(--black);
+}
+
+.faq-heading {
+    max-width: 720px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.faq-heading h2 {
+    margin: 14px 0;
+    font-size: clamp(36px, 5vw, 53px);
+    line-height: 1.25;
+}
+
+.faq-heading h2 span {
+    color: #9a7838;
+}
+
+.faq-heading > p:last-child {
+    color: #6d675e;
+    font-size: 12px;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #d9cdb9;
+}
+
+.faq-item:first-child {
+    border-top: 1px solid #d9cdb9;
+}
+
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 23px 4px;
+    cursor: pointer;
+    list-style: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.plus {
+    color: #9a7838;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] .plus {
+    transform: rotate(45deg);
+}
+
+.faq-item > p {
+    max-width: 700px;
+    padding: 0 35px 25px 4px;
+    color: #6d675e;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* Instagram section */
+
+.instagram-section {
+    padding: 95px 20px;
+    text-align: center;
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(200, 169, 106, 0.10),
+            transparent 70%
+        );
+}
+
+.instagram-section h2 {
+    margin: 15px 0;
+    font-size: clamp(38px, 5vw, 55px);
+    line-height: 1.2;
+}
+
+.instagram-section > p:not(.eyebrow) {
+    max-width: 500px;
+    margin: 0 auto 28px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.instagram-btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+
+.instagram-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+/* Footer */
+
+.footer {
+    padding: 45px 20px 25px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.footer-logo {
+    display: inline-block;
+    font-size: 29px;
+}
+
+.footer > p:not(.copyright) {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.copyright {
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: #8e877b;
+    font-size: 10px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        padding: 22px 5%;
+    }
+
+    .navbar {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 55px;
+        padding: 35px 6% 80px;
+    }
+
+    .contact-info {
+        max-width: 600px;
+    }
+
+    .social-note {
+        margin-top: 35px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 550px) {
+    body {
+        font-size: 13px;
+    }
+
+    .announcement {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .navbar {
+        gap: 12px 18px;
+    }
+
+    .navbar a {
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 75px 22px 60px;
+    }
+
+    .hero h1 {
+        font-size: 53px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .contact-section {
+        padding: 25px 20px 65px;
+        gap: 45px;
+    }
+
+    .contact-info h2 {
+        font-size: 49px;
+    }
+
+    .form-container {
+        padding: 25px 19px;
+    }
+
+    .form-container h2 {
+        font-size: 42px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .faq-section {
+        padding: 70px 22px;
+    }
+
+    .faq-heading h2 {
+        font-size: 37px;
+    }
+
+    .faq-item summary {
+        font-size: 20px;
+    }
+
+    .instagram-section {
+        padding: 70px 20px;
+    }
+
+    .instagram-section h2 {
+        font-size: 39px;
+    }
+
+    .footer-links {
+        gap: 18px;
+    }
+}

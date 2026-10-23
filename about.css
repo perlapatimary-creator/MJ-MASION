@@ -1,0 +1,510 @@
+/* ====================================
+   MAISON MJ - ABOUT PAGE
+   Luxury Black, Gold & Cream Theme
+==================================== */
+
+:root {
+    --about-black: #111111;
+    --about-gold: #c5a46d;
+    --about-cream: #f8f5ef;
+    --about-white: #ffffff;
+    --about-gray: #777777;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+.about-header *,
+.about-hero *,
+.about-story *,
+.about-mission *,
+.about-philosophy *,
+.about-founder *,
+.about-cta *,
+.about-footer * {
+    box-sizing: border-box;
+}
+
+/* Navigation */
+
+.about-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px 7%;
+    min-height: 85px;
+    background: var(--about-black);
+}
+
+.about-logo {
+    color: var(--about-gold);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.about-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.about-nav a {
+    color: var(--about-white);
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-nav a:hover,
+.about-nav a.active {
+    color: var(--about-gold);
+}
+
+/* Hero */
+
+.about-hero {
+    min-height: 570px;
+    padding: 85px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--about-white);
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.about-hero-content {
+    max-width: 850px;
+}
+
+.about-label {
+    color: var(--about-gold);
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 1.8;
+}
+
+.about-hero h1 {
+    margin: 20px 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(45px, 7vw, 80px);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.about-hero h1 span,
+.about-story-content h2 span,
+.about-section-heading h2 span,
+.about-philosophy h2 span,
+.about-founder h2 span,
+.about-cta h2 span {
+    color: var(--about-gold);
+}
+
+.about-hero-content > p:not(.about-label) {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #eeeeee;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* Buttons */
+
+.about-button {
+    display: inline-block;
+    margin: 8px 0;
+    padding: 15px 25px;
+    border: 1px solid var(--about-gold);
+    background: var(--about-gold);
+    color: var(--about-black);
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.about-button:hover {
+    background: transparent;
+    color: var(--about-gold);
+}
+
+/* Brand Story */
+
+.about-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+    padding: 100px 8%;
+    background: var(--about-cream);
+}
+
+.about-story-image {
+    height: 530px;
+    overflow: hidden;
+}
+
+.about-story-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-story-content h2,
+.about-section-heading h2,
+.about-philosophy h2,
+.about-founder h2,
+.about-cta h2 {
+    margin: 15px 0 22px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(36px, 5vw, 53px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.about-story-content > p:not(.about-label) {
+    margin-bottom: 18px;
+    color: var(--about-gray);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 2.1;
+}
+
+/* Mission and Vision */
+
+.about-mission {
+    padding: 95px 8%;
+    background: var(--about-white);
+}
+
+.about-section-heading {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.about-values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-value-card {
+    padding: 35px 28px;
+    border: 1px solid #e8dfd0;
+    background: var(--about-cream);
+    transition: transform 0.3s ease;
+}
+
+.about-value-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-value-number {
+    color: var(--about-gold);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 36px;
+}
+
+.about-value-card h3 {
+    margin: 18px 0 12px;
+    color: var(--about-black);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.about-value-card p {
+    color: var(--about-gray);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* Brand Philosophy */
+
+.about-philosophy {
+    padding: 100px 8%;
+    text-align: center;
+    color: var(--about-white);
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.76),
+            rgba(0, 0, 0, 0.76)
+        ),
+        url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.about-philosophy-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-philosophy h2 {
+    color: var(--about-white);
+}
+
+.about-philosophy-content > p:not(.about-label) {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #dddddd;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 2.1;
+}
+
+/* Founder - Name Only */
+
+.about-founder {
+    padding: 95px 8%;
+    background: var(--about-cream);
+    text-align: center;
+}
+
+.about-founder-card {
+    max-width: 520px;
+    margin: 40px auto 0;
+    padding: 45px 30px;
+    border: 1px solid #e8dfd0;
+    background: var(--about-white);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.04);
+}
+
+.about-founder-number {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border: 1px solid var(--about-gold);
+    border-radius: 50%;
+    color: var(--about-gold);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.about-founder-card h3 {
+    margin: 15px 0 8px;
+    color: var(--about-black);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.about-founder-card > p {
+    color: var(--about-gray);
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    line-height: 1.9;
+    letter-spacing: 1px;
+}
+
+.about-founder-card .about-founder-description {
+    max-width: 360px;
+    margin: 20px auto 0;
+    letter-spacing: 0;
+    font-size: 12px;
+}
+
+.about-founder-line {
+    width: 55px;
+    height: 1px;
+    margin: 20px auto;
+    background: var(--about-gold);
+}
+
+/* Call to Action */
+
+.about-cta {
+    padding: 90px 8%;
+    background: var(--about-white);
+    text-align: center;
+}
+
+.about-cta > p:not(.about-label) {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: var(--about-gray);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* Footer */
+
+.about-footer {
+    padding: 55px 7% 25px;
+    background: var(--about-black);
+    text-align: center;
+}
+
+.about-footer > p {
+    color: #cccccc;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.about-footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 28px 0;
+}
+
+.about-footer-links a {
+    color: var(--about-white);
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-footer-links a:hover {
+    color: var(--about-gold);
+}
+
+.about-footer .about-copyright {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid #333333;
+    color: #999999;
+    font-size: 10px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .about-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .about-nav {
+        gap: 16px;
+    }
+
+    .about-story {
+        gap: 35px;
+        padding: 75px 6%;
+    }
+
+    .about-story-image {
+        height: 450px;
+    }
+
+    .about-values-grid {
+        gap: 15px;
+    }
+
+    .about-value-card {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    .about-header {
+        padding: 20px 5%;
+    }
+
+    .about-logo {
+        font-size: 28px;
+    }
+
+    .about-nav {
+        gap: 12px 16px;
+    }
+
+    .about-nav a {
+        font-size: 10px;
+    }
+
+    .about-hero {
+        min-height: 450px;
+        padding: 65px 6%;
+    }
+
+    .about-hero h1 {
+        font-size: 47px;
+    }
+
+    .about-story {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 65px 7%;
+    }
+
+    .about-story-image {
+        height: 350px;
+    }
+
+    .about-mission {
+        padding: 70px 6%;
+    }
+
+    .about-values-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-value-card {
+        padding: 30px 25px;
+    }
+
+    .about-philosophy {
+        padding: 75px 7%;
+    }
+
+    .about-founder {
+        padding: 70px 6%;
+    }
+
+    .about-founder-card {
+        padding: 35px 20px;
+    }
+
+    .about-cta {
+        padding: 70px 6%;
+    }
+
+    .about-footer-links {
+        gap: 16px;
+    }
+}

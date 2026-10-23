@@ -1,0 +1,533 @@
+/* =====================================
+   MAISON MJ - COLLECTIONS PAGE
+===================================== */
+
+:root {
+    --collection-black: #111111;
+    --collection-gold: #c5a46d;
+    --collection-cream: #f8f5ef;
+    --collection-white: #ffffff;
+    --collection-gray: #777777;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+.collection-header,
+.collection-header * ,
+.collection-hero,
+.collection-hero *,
+.collection-intro,
+.collection-intro *,
+.collection-grid-section,
+.collection-grid-section *,
+.collection-feature,
+.collection-feature *,
+.collection-everyday,
+.collection-everyday *,
+.collection-footer,
+.collection-footer * {
+    box-sizing: border-box;
+}
+
+.collection-header {
+    width: 100%;
+    min-height: 85px;
+    padding: 20px 7%;
+    background: var(--collection-black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.collection-logo {
+    color: var(--collection-gold);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.collection-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.collection-nav a {
+    color: var(--collection-white);
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.collection-nav a:hover,
+.collection-nav a.active {
+    color: var(--collection-gold);
+}
+
+/* Hero */
+
+.collection-hero {
+    min-height: 570px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--collection-white);
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.62)
+        ),
+        url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.collection-hero-content {
+    max-width: 800px;
+}
+
+.collection-label {
+    color: var(--collection-gold);
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 1.8;
+}
+
+.collection-hero h1 {
+    margin: 18px 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(48px, 8vw, 86px);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.collection-hero h1 span,
+.collection-intro h2 span,
+.collection-feature-content h2 span,
+.collection-everyday h2 span {
+    color: var(--collection-gold);
+}
+
+.collection-hero-content > p:not(.collection-label) {
+    max-width: 580px;
+    margin: 0 auto 32px;
+    color: #eeeeee;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* Buttons */
+
+.collection-button {
+    display: inline-block;
+    margin: 8px 5px;
+    padding: 15px 25px;
+    border: 1px solid var(--collection-gold);
+    background: var(--collection-gold);
+    color: var(--collection-black);
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.collection-button:hover {
+    background: transparent;
+    color: var(--collection-gold);
+}
+
+.collection-button-outline {
+    background: transparent;
+    color: var(--collection-gold);
+}
+
+.collection-button-outline:hover {
+    background: var(--collection-gold);
+    color: var(--collection-black);
+}
+
+/* Introduction */
+
+.collection-intro {
+    padding: 85px 8% 55px;
+    background: var(--collection-cream);
+    text-align: center;
+}
+
+.collection-intro h2,
+.collection-feature-content h2,
+.collection-everyday h2 {
+    margin: 15px 0 20px;
+    color: var(--collection-black);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(35px, 5vw, 53px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.collection-intro > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--collection-gray);
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* Collection cards */
+
+.collection-grid-section {
+    padding: 35px 7% 100px;
+    background: var(--collection-cream);
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 55px 35px;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.collection-card {
+    min-width: 0;
+    background: var(--collection-white);
+    transition: transform 0.3s ease;
+}
+
+.collection-card:hover {
+    transform: translateY(-5px);
+}
+
+.collection-image-link {
+    position: relative;
+    display: block;
+    height: 440px;
+    overflow: hidden;
+    background: #e7e0d5;
+}
+
+.collection-image-link img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.collection-card:hover .collection-image-link img {
+    transform: scale(1.05);
+}
+
+.collection-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--collection-white);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.collection-card:hover .collection-overlay {
+    opacity: 1;
+}
+
+.collection-card-content {
+    padding: 28px 25px 32px;
+}
+
+.collection-number {
+    color: var(--collection-gold);
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.collection-card-content h3 {
+    margin: 12px 0;
+    color: var(--collection-black);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.collection-card-content > p:not(.collection-number) {
+    min-height: 52px;
+    color: var(--collection-gray);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.collection-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--collection-black);
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--collection-gold);
+    padding-bottom: 7px;
+    transition: color 0.3s ease;
+}
+
+.collection-link:hover {
+    color: #a47d3d;
+}
+
+/* Featured accessories section */
+
+.collection-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: var(--collection-black);
+}
+
+.collection-feature-image {
+    min-height: 520px;
+    overflow: hidden;
+}
+
+.collection-feature-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    object-fit: cover;
+}
+
+.collection-feature-content {
+    padding: 65px 12%;
+}
+
+.collection-feature-content h2 {
+    color: var(--collection-white);
+}
+
+.collection-feature-content > p:not(.collection-label) {
+    margin-bottom: 28px;
+    color: #cccccc;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* Everyday essentials */
+
+.collection-everyday {
+    padding: 100px 8%;
+    background: var(--collection-cream);
+    text-align: center;
+}
+
+.collection-everyday > p:not(.collection-label) {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    color: var(--collection-gray);
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.collection-tags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.collection-tags span {
+    padding: 12px 16px;
+    border: 1px solid #d8c8ac;
+    color: var(--collection-black);
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+
+.collection-footer {
+    padding: 55px 7% 25px;
+    background: var(--collection-black);
+    text-align: center;
+}
+
+.collection-footer > p {
+    color: #cccccc;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.collection-footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 28px 0;
+}
+
+.collection-footer-links a {
+    color: var(--collection-white);
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.collection-footer-links a:hover {
+    color: var(--collection-gold);
+}
+
+.collection-footer .collection-copyright {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid #333333;
+    color: #999999;
+    font-size: 10px;
+}
+
+/* Responsive design */
+
+@media (max-width: 900px) {
+    .collection-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .collection-nav {
+        gap: 16px;
+    }
+
+    .collection-image-link {
+        height: 350px;
+    }
+
+    .collection-feature-content {
+        padding: 45px 8%;
+    }
+}
+
+@media (max-width: 650px) {
+    .collection-header {
+        padding: 20px 5%;
+    }
+
+    .collection-logo {
+        font-size: 28px;
+    }
+
+    .collection-nav {
+        gap: 12px 16px;
+    }
+
+    .collection-nav a {
+        font-size: 10px;
+    }
+
+    .collection-hero {
+        min-height: 450px;
+        padding: 65px 6%;
+    }
+
+    .collection-hero h1 {
+        font-size: 49px;
+    }
+
+    .collection-intro {
+        padding: 65px 7% 40px;
+    }
+
+    .collection-grid-section {
+        padding: 25px 6% 65px;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .collection-image-link {
+        height: 390px;
+    }
+
+    .collection-card-content {
+        padding: 23px 20px 28px;
+    }
+
+    .collection-card-content h3 {
+        font-size: 29px;
+    }
+
+    .collection-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-feature-image,
+    .collection-feature-image img {
+        min-height: 350px;
+        height: 350px;
+    }
+
+    .collection-feature-content {
+        padding: 50px 7%;
+    }
+
+    .collection-everyday {
+        padding: 70px 6%;
+    }
+
+    .collection-footer-links {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 380px) {
+    .collection-image-link {
+        height: 300px;
+    }
+
+    .collection-hero h1 {
+        font-size: 42px;
+    }
+
+    .collection-tags {
+        flex-direction: column;
+    }
+}
